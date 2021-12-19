@@ -58,7 +58,6 @@
 
     <modules>
         <module>ContentNegotiation</module>
-        <module>JWTSecurity</module>
         <module>MultiDB</module>
     </modules>
 </project>

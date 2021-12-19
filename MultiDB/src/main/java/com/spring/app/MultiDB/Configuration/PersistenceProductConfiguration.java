@@ -16,9 +16,9 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
-@PropertySource({ "classpath:persistence-multiple-db.properties" })
+@PropertySource({"classpath:persistence-multiple-db.properties"})
 @EnableJpaRepositories(
-    basePackages = "com.baeldung.multipledb.dao.product", 
+    basePackages = "com.spring.app.MultiDB.Repository.product",
     entityManagerFactoryRef = "productEntityManager", 
     transactionManagerRef = "productTransactionManager"
 )

@@ -15,20 +15,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(name = "username", nullable = false, unique = true)
+    private String userName;
+
+    @Column(name= "password", nullable = false)
+    private String password;
+
+    @Column(name = "name", nullable = true)
     private String name;
 
-    @Column(unique = true, nullable = false)
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
+    @Column(name = "age")
     private int age;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", age=" + age +
-                '}';
-    }
+
 }

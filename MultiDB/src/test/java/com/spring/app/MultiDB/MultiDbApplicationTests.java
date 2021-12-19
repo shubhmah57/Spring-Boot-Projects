@@ -21,16 +21,17 @@ import java.util.List;
 class MultiDbApplicationTests {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 
-	// @Autowired
-	// ProductRepository productRepository;
+	 @Autowired
+	 private ProductRepository productRepository;
 
 	@Test
 	@Transactional("userTransactionManager")
 	public void whenUserCreated(){
 		User user = new User();
-		user.setId(1);
+		user.setUserName("shubmah9415");
+		user.setPassword("123456");
 		user.setName("Shubham");
 		user.setEmail("shubham.mahindru9415@gmail.com");
 		user.setAge(27);
@@ -38,18 +39,19 @@ class MultiDbApplicationTests {
 
 		Assert.assertNotNull(userRepository.findById(user.getId()));
 	}
-	//
-	// @Test
-	// @Transactional("productTransactionManager")
-	// public void whenProductsCreated(){
-	//
-	// 	Product product = new Product();
-	// 	product.setName("Iphone12");
-	// 	product.setPrice(65000);
-	//
-	// 	product  = productRepository.save(product);
-	//
-	// 	Assert.assertNotNull(productRepository.getById(product.getId()));
-	//
-	// }
+
+	 @Test
+	 @Transactional("productTransactionManager")
+	 public void whenProductsCreated(){
+
+	 	Product product = new Product();
+	 	product.setName("Iphone12");
+	 	product.setPrice(65000);
+
+	 	product  = productRepository.save(product);
+
+		 productRepository.findById(product.getId()).isPresent();
+	 }
+
+
 }
