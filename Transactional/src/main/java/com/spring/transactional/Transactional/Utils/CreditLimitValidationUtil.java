@@ -17,7 +17,7 @@ public class CreditLimitValidationUtil {
     }
 
     public static boolean validateLimit(String accountNumber, double amount){
-
+        System.out.println("The amount is :" + amount +  " " + accountNumber + accountsMap.get(accountNumber));
         if(null!= accountNumber && accountsMap.get(accountNumber) > amount){
             return true;
         }

@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class PaymentInfo {
 
     @Id
-    @GeneratedValue(generator = "uuid")
+    @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     private  String paymentId;
 

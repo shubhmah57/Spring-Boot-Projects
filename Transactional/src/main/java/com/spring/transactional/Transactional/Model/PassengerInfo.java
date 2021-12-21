@@ -25,7 +25,7 @@ public class PassengerInfo {
     private String name;
     private String email;
     private String source;
-    private String Destination;
+    private String destination;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yy")
     private Date travelDate;
     private String pickupTime;
