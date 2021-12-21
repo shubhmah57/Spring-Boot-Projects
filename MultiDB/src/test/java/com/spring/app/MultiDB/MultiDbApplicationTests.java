@@ -22,7 +22,6 @@ class MultiDbApplicationTests {
 
 	@Autowired
 	private UserRepository userRepository;
-
 	 @Autowired
 	 private ProductRepository productRepository;
 
