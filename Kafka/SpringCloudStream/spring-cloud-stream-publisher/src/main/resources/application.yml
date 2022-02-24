@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    bindings:
+      output:
+        destination: first_topic
